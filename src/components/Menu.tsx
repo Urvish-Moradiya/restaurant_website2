@@ -9,25 +9,25 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
   const [activeTab, setActiveTab] = useState('starters');
 
   return (
-    <section id="menu" className="py-20 bg-[#FFFDD0]">
+    <section id="menu" className="py-20 bg-[#F7F7F7]">
       <div className="container mx-auto px-4">
         {/* Special Events & Private Dining */}
         <div className="mb-20">
           <div className="text-center mb-16 scroll-animate" data-id="special-events-title">
             <h2
-              className={`font-serif text-4xl md:text-5xl font-bold text-[#800020] mb-4 transition-all duration-1000 ${
+              className={`font-serif text-4xl md:text-5xl font-bold text-[#1A2930] mb-4 transition-all duration-1000 ${
                 animatedElements.includes('special-events-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              Special Events & Private Dining
+              Special Events & <span className="text-[#C8A97E]">Private Dining</span>
             </h2>
             <div
-              className={`w-24 h-1 bg-[#FFD700] mx-auto mb-6 transition-all duration-1000 delay-300 ${
+              className={`w-24 h-1 bg-[#C8A97E] mx-auto mb-6 transition-all duration-1000 delay-300 ${
                 animatedElements.includes('special-events-title') ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
               }`}
             ></div>
             <p
-              className={`font-sans text-lg text-[#36454F] max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
+              className={`font-sans text-lg text-[#333333] max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
                 animatedElements.includes('special-events-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
@@ -77,10 +77,10 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
                     animatedElements.includes(item.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
                 >
-                  <h3 className="font-serif text-2xl font-bold text-[#800020] mb-2">{item.title}</h3>
-                  <p className="font-sans text-sm text-[#36454F] mb-4">{item.description}</p>
+                  <h3 className="font-serif text-2xl font-bold text-[#1A2930] mb-2">{item.title}</h3>
+                  <p className="font-sans text-sm text-[#333333] mb-4">{item.description}</p>
                   <button
-                    className="bg-[#800020] text-[#FFFDD0] hover:bg-[#600018] font-sans text-sm uppercase tracking-wider px-6 py-2 rounded-button whitespace-nowrap transition-all duration-300 hover:scale-105"
+                    className="bg-[#C8A97E] text-[#1A2930] hover:bg-[#B69268] font-sans text-sm uppercase tracking-wider px-6 py-2 rounded-md whitespace-nowrap transition-all duration-300 hover:shadow-lg"
                   >
                     Learn More
                   </button>
@@ -93,19 +93,19 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
         <div className="mb-20">
           <div className="text-center mb-16 scroll-animate" data-id="chefs-table-title">
             <h2
-              className={`font-serif text-4xl md:text-5xl font-bold text-[#800020] mb-4 transition-all duration-1000 ${
+              className={`font-serif text-4xl md:text-5xl font-bold text-[#1A2930] mb-4 transition-all duration-1000 ${
                 animatedElements.includes('chefs-table-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              Chef's Table Experience
+              Chef's <span className="text-[#C8A97E]">Table</span> Experience
             </h2>
             <div
-              className={`w-24 h-1 bg-[#FFD700] mx-auto mb-6 transition-all duration-1000 delay-300 ${
+              className={`w-24 h-1 bg-[#C8A97E] mx-auto mb-6 transition-all duration-1000 delay-300 ${
                 animatedElements.includes('chefs-table-title') ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
               }`}
             ></div>
             <p
-              className={`font-sans text-lg text-[#36454F] max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
+              className={`font-sans text-lg text-[#333333] max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
                 animatedElements.includes('chefs-table-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
@@ -122,7 +122,7 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
                 }`}
               />
               <div
-                className={`absolute -bottom-6 -right-6 bg-[#FFD700] text-[#36454F] p-6 rounded-lg shadow-lg transition-all duration-1000 delay-500 ${
+                className={`absolute -bottom-6 -right-6 bg-[#C8A97E] text-[#1A2930] p-6 rounded-lg shadow-lg transition-all duration-1000 delay-500 ${
                   animatedElements.includes('chefs-table-image') ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-20 translate-y-20'
                 }`}
               >
@@ -132,7 +132,7 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
             </div>
             <div className="scroll-animate" data-id="chefs-table-content">
               <h3
-                className={`font-serif text-3xl font-bold text-[#800020] mb-4 transition-all duration-1000 ${
+                className={`font-serif text-3xl font-bold text-[#1A2930] mb-4 transition-all duration-1000 ${
                   animatedElements.includes('chefs-table-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -150,20 +150,31 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
                   'Signed menu and recipe collection',
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <i className="fas fa-check-circle text-[#FFD700] mt-1 mr-3"></i>
-                    <p className="font-sans text-[#36454F]">{item}</p>
+                    <svg 
+                      className="w-5 h-5 text-[#C8A97E] mt-1 mr-3" 
+                      fill="currentColor" 
+                      viewBox="0 0 20 20" 
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path 
+                        fillRule="evenodd" 
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" 
+                        clipRule="evenodd" 
+                      />
+                    </svg>
+                    <p className="font-sans text-[#333333]">{item}</p>
                   </div>
                 ))}
               </div>
               <p
-                className={`font-sans text-sm text-[#36454F] mb-6 transition-all duration-1000 delay-500 ${
+                className={`font-sans text-sm text-[#333333] mb-6 transition-all duration-1000 delay-500 ${
                   animatedElements.includes('chefs-table-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
                 Available Thursday through Saturday evenings. Maximum 8 guests per seating. Advance reservation required.
               </p>
               <button
-                className={`bg-[#800020] text-[#FFFDD0] hover:bg-[#600018] font-sans text-sm uppercase tracking-wider px-6 py-2 rounded-button whitespace-nowrap transition-all duration-1000 delay-700 hover:scale-105 ${
+                className={`bg-[#C8A97E] text-[#1A2930] hover:bg-[#B69268] font-sans text-sm uppercase tracking-wider px-6 py-2 rounded-md whitespace-nowrap transition-all duration-1000 delay-700 hover:shadow-lg ${
                   animatedElements.includes('chefs-table-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -176,19 +187,19 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
         <div className="mb-20">
           <div className="text-center mb-16 scroll-animate" data-id="gift-cards-title">
             <h2
-              className={`font-serif text-4xl md:text-5xl font-bold text-[#800020] mb-4 transition-all duration-1000 ${
+              className={`font-serif text-4xl md:text-5xl font-bold text-[#1A2930] mb-4 transition-all duration-1000 ${
                 animatedElements.includes('gift-cards-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              Gift Cards & Experiences
+              Gift Cards & <span className="text-[#C8A97E]">Experiences</span>
             </h2>
             <div
-              className={`w-24 h-1 bg-[#FFD700] mx-auto mb-6 transition-all duration-1000 delay-300 ${
+              className={`w-24 h-1 bg-[#C8A97E] mx-auto mb-6 transition-all duration-1000 delay-300 ${
                 animatedElements.includes('gift-cards-title') ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
               }`}
             ></div>
             <p
-              className={`font-sans text-lg text-[#36454F] max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
+              className={`font-sans text-lg text-[#333333] max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
                 animatedElements.includes('gift-cards-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
@@ -199,21 +210,21 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
             {[
               {
                 id: 'gift-card',
-                icon: 'fa-gift',
+                icon: 'gift',
                 title: 'Digital Gift Card',
                 description: 'Send instantly via email. Perfect for last-minute gifts.',
                 buttonText: 'Purchase Now',
               },
               {
                 id: 'tasting-experience',
-                icon: 'fa-glass-cheers',
+                icon: 'glass-cheers',
                 title: 'Tasting Experience',
                 description: '5-course tasting menu with wine pairings for two.',
                 buttonText: 'Learn More',
               },
               {
                 id: 'cooking-class',
-                icon: 'fa-utensils',
+                icon: 'utensils',
                 title: 'Cooking Class',
                 description: 'Interactive cooking class with Chef Antonio Rossi.',
                 buttonText: 'Book Class',
@@ -225,28 +236,42 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
                 data-id={item.id}
               >
                 <div
-                  className={`w-20 h-20 bg-[#800020] rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-1000 ${
+                  className={`w-20 h-20 bg-[#1A2930] rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-1000 ${
                     animatedElements.includes(item.id) ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                   }`}
                 >
-                  <i className={`fas ${item.icon} text-[#FFFDD0] text-3xl`}></i>
+                  {item.icon === 'gift' && (
+                    <svg className="w-10 h-10 text-[#C8A97E]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17a3 3 0 015-2.236zM10 7a1 1 0 100-2 1 1 0 000 2zm-5 1v9h10V8h-1.84A2.996 2.996 0 0110 9a2.996 2.996 0 01-3.16-1H5z" clipRule="evenodd" />
+                    </svg>
+                  )}
+                  {item.icon === 'glass-cheers' && (
+                    <svg className="w-10 h-10 text-[#C8A97E]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" />
+                    </svg>
+                  )}
+                  {item.icon === 'utensils' && (
+                    <svg className="w-10 h-10 text-[#C8A97E]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                    </svg>
+                  )}
                 </div>
                 <h3
-                  className={`font-serif text-2xl font-bold text-[#800020] mb-4 transition-all duration-1000 delay-300 ${
+                  className={`font-serif text-2xl font-bold text-[#1A2930] mb-4 transition-all duration-1000 delay-300 ${
                     animatedElements.includes(item.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
                 >
                   {item.title}
                 </h3>
                 <p
-                  className={`font-sans text-sm text-[#36454F] mb-6 transition-all duration-1000 delay-500 ${
+                  className={`font-sans text-sm text-[#333333] mb-6 transition-all duration-1000 delay-500 ${
                     animatedElements.includes(item.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
                 >
                   {item.description}
                 </p>
                 <button
-                  className={`bg-[#800020] text-[#FFFDD0] hover:bg-[#600018] font-sans text-sm uppercase tracking-wider px-6 py-2 rounded-button whitespace-nowrap transition-all duration-1000 delay-700 hover:scale-105 ${
+                                   className={`bg-[#C8A97E] text-[#1A2930] hover:bg-[#B69268] font-sans text-sm uppercase tracking-wider px-6 py-2 rounded-md whitespace-nowrap transition-all duration-1000 delay-700 hover:shadow-lg ${
                     animatedElements.includes(item.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
                 >
@@ -259,19 +284,19 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
         {/* Culinary Masterpieces */}
         <div className="text-center mb-16 scroll-animate" data-id="menu-title">
           <h2
-            className={`font-serif text-4xl md:text-5xl font-bold text-[#800020] mb-4 transition-all duration-1000 ${
+            className={`font-serif text-4xl md:text-5xl font-bold text-[#1A2930] mb-4 transition-all duration-1000 ${
               animatedElements.includes('menu-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            Culinary Masterpieces
+            Culinary <span className="text-[#C8A97E]">Masterpieces</span>
           </h2>
           <div
-            className={`w-24 h-1 bg-[#FFD700] mx-auto mb-6 transition-all duration-1000 delay-300 ${
+            className={`w-24 h-1 bg-[#C8A97E] mx-auto mb-6 transition-all duration-1000 delay-300 ${
               animatedElements.includes('menu-title') ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
             }`}
           ></div>
           <p
-            className={`font-sans text-lg text-[#36454F] max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
+            className={`font-sans text-lg text-[#333333] max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
               animatedElements.includes('menu-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -281,7 +306,7 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
         {/* Menu Tabs */}
         <div className="w-full scroll-animate" data-id="menu-tabs">
           <div
-            className={`flex justify-center mb-12 bg-transparent border-b border-[#36454F]/20 transition-all duration-1000 ${
+            className={`flex flex-wrap justify-center mb-12 bg-transparent border-b border-[#1A2930]/20 transition-all duration-1000 ${
               animatedElements.includes('menu-tabs') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -289,10 +314,10 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
               <button
                 key={category.category}
                 onClick={() => setActiveTab(category.category)}
-                className={`font-serif text-lg px-8 py-3 transition-all duration-300 rounded-button whitespace-nowrap ${
+                className={`font-serif text-lg px-8 py-3 transition-all duration-300 whitespace-nowrap ${
                   activeTab === category.category
-                    ? 'text-[#800020] border-b-2 border-[#800020]'
-                    : 'text-[#36454F] hover:text-[#800020]'
+                    ? 'text-[#C8A97E] border-b-2 border-[#C8A97E]'
+                    : 'text-[#1A2930] hover:text-[#C8A97E]'
                 }`}
               >
                 {category.category.charAt(0).toUpperCase() + category.category.slice(1)}
@@ -332,19 +357,19 @@ const Menu: React.FC<MenuProps> = ({ animatedElements }) => {
                       }`}
                     >
                       <div className="flex justify-between items-center mb-3">
-                        <h3 className="font-serif text-xl font-bold text-[#800020]">{item.name}</h3>
-                        <span className="font-serif text-xl text-[#800020]">{item.price}</span>
+                        <h3 className="font-serif text-xl font-bold text-[#1A2930]">{item.name}</h3>
+                        <span className="font-serif text-xl text-[#C8A97E]">{item.price}</span>
                       </div>
-                      <p className="font-sans text-sm text-[#36454F] mb-4">{item.description}</p>
-                      <div className="flex gap-2">
+                      <p className="font-sans text-sm text-[#333333] mb-4">{item.description}</p>
+                      <div className="flex flex-wrap gap-2">
                         {item.dietary.includes('vegetarian') && (
-                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                          <span className="bg-[#E8F5E9] text-[#2E7D32] text-xs px-2 py-1 rounded-full">Vegetarian</span>
                         )}
                         {item.dietary.includes('vegan') && (
-                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegan</span>
+                          <span className="bg-[#E8F5E9] text-[#2E7D32] text-xs px-2 py-1 rounded-full">Vegan</span>
                         )}
                         {item.dietary.includes('gluten-free') && (
-                          <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Gluten-Free</span>
+                          <span className="bg-[#FFF8E1] text-[#F9A825] text-xs px-2 py-1 rounded-full">Gluten-Free</span>
                         )}
                       </div>
                     </div>
