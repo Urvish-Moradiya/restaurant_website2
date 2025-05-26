@@ -1,23 +1,23 @@
 export const teamMembers = [
   {
-    name: 'Antonio Rossi',
+    name: "Marco Benedetti",
     role: 'Executive Chef',
-    bio: 'With over 20 years of experience, Chef Rossi brings Italian heritage and modern innovation to every dish.',
+      bio: "With over 15 years of experience in Michelin-starred kitchens across Europe, Chef Marco brings passion and precision to every dish.",
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20an%20Italian%20chef%20in%20white%20uniform%2C%20male%2C%20in%20his%2040s%2C%20confident%2C%20kitchen%20background&width=400&height=400&seq=63&orientation=square',
+      'https://images.unsplash.com/photo-1697898109582-40f15c65f174',
   },
   {
-    name: 'Elizabeth Morgan',
+      name: "Sophie Laurent",
     role: 'Restaurateur & Sommelier',
-    bio: 'Elizabeth curates our award-winning wine list and ensures every guest feels at home.',
+    bio: "A graduate of Le Cordon Bleu, Sophie's innovative desserts have been featured in culinary magazines worldwide.",
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20female%20sommelier%2C%20in%20her%2030s%2C%20elegant%2C%20wine%20cellar%20background&width=400&height=400&seq=64&orientation=square',
+      'https://images.unsplash.com/photo-1731412657838-c04d8500917f',
   },
   {
-    name: 'Sophie Laurent',
+      name: "James Morrison",
     role: 'Pastry Chef',
-    bio: 'Sophie’s desserts are a celebration of flavor and artistry, blending French techniques with local ingredients.',
+    bio: "James holds advanced certifications from the Court of Master Sommeliers and curates our extensive wine collection.",
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20female%20pastry%20chef%2C%20in%20her%2030s%2C%20smiling%2C%20kitchen%20background%20with%20desserts&width=400&height=400&seq=65&orientation=square',
+      'https://plus.unsplash.com/premium_photo-1676651534759-5556422fa93d',
   },
 ];

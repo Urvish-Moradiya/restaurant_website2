@@ -2,15 +2,15 @@ export const testimonials = [
   {
     name: 'Emily Carter',
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20woman%20in%20her%2030s%2C%20smiling%2C%20elegant%2C%20neutral%20background&width=100&height=100&seq=59&orientation=square',
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
     rating: 5,
     date: 'October 2024',
-    text: 'An absolutely phenomenal dining experience! The attention to detail in every dish was remarkable, and the staff made us feel like royalty. The Chef’s Table is a must for any food lover.',
+    text: 'An absolutely phenomenal dining experience! The attention to detail in every dish was remarkable, and the staff made us feel like royalty. The Chef’s Table is a must for food lover.',
   },
   {
     name: 'Michael Nguyen',
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20man%20in%20his%2040s%2C%20smiling%2C%20elegant%2C%20neutral%20background&width=100&height=100&seq=60&orientation=square',
+      'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6',
     rating: 5,
     date: 'September 2024',
     text: 'Saveur never disappoints. The seasonal menu was a perfect blend of innovation and tradition. The wine pairings elevated every course. Can’t wait to return!',
@@ -18,7 +18,7 @@ export const testimonials = [
   {
     name: 'Sophia Rodriguez',
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20woman%20in%20her%2020s%2C%20smiling%2C%20elegant%2C%20neutral%20background&width=100&height=100&seq=61&orientation=square',
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb',
     rating: 4,
     date: 'August 2024',
     text: 'The ambiance and service were impeccable. The desserts were a highlight—especially the lemon tart. My only wish is for more vegan options on the menu.',
@@ -26,7 +26,7 @@ export const testimonials = [
   {
     name: 'James Patel',
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20man%20in%20his%2030s%2C%20smiling%2C%20elegant%2C%20neutral%20background&width=100&height=100&seq=62&orientation=square',
+      'https://images.unsplash.com/photo-1722322426803-101270837197',
     rating: 5,
     date: 'July 2024',
     text: 'A perfect evening from start to finish. The staff’s knowledge of the menu and wine list was impressive, and the food was nothing short of artistry.',
